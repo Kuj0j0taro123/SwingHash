@@ -119,17 +119,21 @@ public class PreferencesFrame extends JFrame implements Serializable {
         return this.algorithmsToRun;
     }
 
+    public void checkboxStateChangedHandler(){
+        for (Constants.ChecksumAlgorithm algorithm : Constants.ChecksumAlgorithm.values()){
+            GUIUpdater.updateChecksumPanelVisibility(algorithm, checkBoxes.get(algorithm.ordinal()).isSelected());
+            if (checkBoxes.get(algorithm.ordinal()).isSelected())
+                algorithmsToRun.add(algorithm);
+            else
+                algorithmsToRun.remove(algorithm);
+        }
+        GUIUpdater.hashButtonUpdate();
+    }
+
     public class CheckBoxActionListener implements ActionListener {
         @Override
         public void actionPerformed(ActionEvent e) {
-            for (Constants.ChecksumAlgorithm algorithm : Constants.ChecksumAlgorithm.values()){
-                GUIUpdater.updateChecksumPanelVisibility(algorithm, checkBoxes.get(algorithm.ordinal()).isSelected());
-                if (checkBoxes.get(algorithm.ordinal()).isSelected())
-                    algorithmsToRun.add(algorithm);
-                else
-                    algorithmsToRun.remove(algorithm);
-            }
-            GUIUpdater.hashButtonUpdate();
+            checkboxStateChangedHandler();
         }
     }
 }

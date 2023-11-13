@@ -33,7 +33,6 @@ public class Main {
         executor = new ExtendedExecutor(11, 11,
                 100, TimeUnit.MILLISECONDS, new LinkedBlockingQueue<Runnable>());
         activeThreads = new ArrayList<>();
-
         mainFrame = new MainFrame();
 
         checksumPanel = mainFrame.getChecksumPanel();
@@ -41,14 +40,11 @@ public class Main {
         checksumControlPanel = mainFrame.getChecksumControlPanel();
         applicationMenuBar = mainFrame.getApplicationMenuBar();
         preferencesFrame = applicationMenuBar.getPreferencesFrame();
+        preferencesFrame.checkboxStateChangedHandler();
 
         UIManager.LookAndFeelInfo[] looks = UIManager.getInstalledLookAndFeels();
         for (UIManager.LookAndFeelInfo look : looks) {
             System.out.println(look.getClassName());
         }
-
-        // not ideal but it'll work for now
-        // this will look at what checkboxes are selected and hide/unhide text areas and labels for checksums
-        preferencesFrame.getSha256checkBox().getActionListeners()[0].actionPerformed(null);
     }
 }
