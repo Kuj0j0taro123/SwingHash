@@ -1,8 +1,6 @@
 package com.kuj0j0taro123.swinghash.gui;
 
-import com.kuj0j0taro123.swinghash.Main;
 import com.kuj0j0taro123.swinghash.constants.Constants;
-import com.kuj0j0taro123.swinghash.gui.menubar.preferences.PreferencesFrame;
 
 import javax.swing.*;
 import java.awt.*;

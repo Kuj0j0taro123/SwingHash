@@ -2,7 +2,6 @@ package com.kuj0j0taro123.swinghash.gui.menubar;// TODO: add changeFonts method
 // MAKE THE APPEARANCE THING A SEPARATE MENU ENTRY WITH FONTS AND THEMES (LIKE DARK/LIGHT THEME)
 
 import com.kuj0j0taro123.swinghash.Main;
-import com.kuj0j0taro123.swinghash.gui.menubar.preferences.PreferencesFrame;
 
 import javax.swing.*;
 import java.awt.event.ActionEvent;

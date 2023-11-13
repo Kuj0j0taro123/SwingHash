@@ -2,7 +2,7 @@ package com.kuj0j0taro123.swinghash;
 
 import com.kuj0j0taro123.swinghash.gui.*;
 import com.kuj0j0taro123.swinghash.gui.menubar.ApplicationMenuBar;
-import com.kuj0j0taro123.swinghash.gui.menubar.preferences.PreferencesFrame;
+import com.kuj0j0taro123.swinghash.gui.menubar.PreferencesFrame;
 
 import javax.swing.*;
 import java.util.ArrayList;

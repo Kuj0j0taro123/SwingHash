@@ -1,4 +1,4 @@
-package com.kuj0j0taro123.swinghash.gui.menubar.preferences;
+package com.kuj0j0taro123.swinghash.gui.menubar;
 
 import com.kuj0j0taro123.swinghash.constants.Constants;
 import com.kuj0j0taro123.swinghash.gui.GUIUpdater;
